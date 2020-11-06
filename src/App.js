@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+<<<<<<< HEAD
 import Cards from "./functional-components/cards";
 import CountryPicker from "./class-components/countrypicker";
 
@@ -29,6 +30,21 @@ const App = () => {
         <Cards fetchedCovidCasesData={fetchedCovidCasesData} />
         <CountryPicker handleCountryChange={this.handleCountryChange} />
       </div>
+=======
+
+import { fetchDataByCountries } from "./api";
+
+import useStyles from "./styles";
+import covidImage from "../src/images/covid.png";
+//
+//
+function App() {
+  const fetchedDataByCountries = fetchDataByCountries();
+
+  return (
+    <>
+      <div className></div>
+>>>>>>> c519879037ff3c8bdd89b6e44798111e960682a7
     </>
   );
 };
