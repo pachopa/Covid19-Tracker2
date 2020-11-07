@@ -9,10 +9,8 @@ export default function Cards({
   fetchedCovidCasesData: { confirmed, recovered, deaths, lastUpdate },
 }) {
   if (!confirmed) {
-    console.log("chris");
     return "Loading...";
   } else {
-    console.log("chris2", confirmed.value);
     return (
       <div className={styles.container}>
         <Grid container spacing={3} justify="center">
