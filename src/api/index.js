@@ -3,7 +3,7 @@
 import axios from "axios";
 
 //base API URL
-const url = "http://covid19.mathdro.id/api";
+const url = "https://covid19.mathdro.id/api";
 
 export const fetchDataByCountries = async (country) => {
   /**
