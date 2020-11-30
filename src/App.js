@@ -12,12 +12,27 @@ import { fetchDataByCountries, fetchCountries } from "./api";
 import styles from "./app.module.css";
 import covidImage from "../src/images/covid.png";
 
-//
+/**
+ *  What this does: This is a main functional component that controls all API data and structurs all components
+ *  Feature: 1. Fetch and transfer data to child components as prop
+ *           2. Handle 'country' data when a user select a specific country
+ */
 const App = () => {
+  /**
+   *  What this does: Used a react useState() hook to treate data as state
+   *  Feature: 1. The setState function is used to update the state
+   *
+   */
   const [fetchedCovidCasesData, setfetchedCovidCasesData] = useState({});
   const [country, setCountry] = useState("");
 
   useEffect(() => {
+    /**
+     *  What this does: same as componentDidMount(), this fetches Covid cases data just after rendering
+     *  Feature: 1. The setState function is used to update the state
+     *           2. Used Async/Await to allows an asynchronous
+     *
+     */
     const fetchedDataByCountries = async () => {
       const initialFetchedData = await fetchDataByCountries();
       setfetchedCovidCasesData(initialFetchedData);
@@ -26,6 +41,12 @@ const App = () => {
   }, []);
 
   const handleCountryChange = async (country) => {
+    /**
+     *  What this does:
+     *  Feature: 1. The setState function is used to update the state
+     *           2. Used Async/Await to allows an asynchronous
+     *
+     */
     const fetchedDataByCountries = await fetchDataByCountries(country);
 
     setfetchedCovidCasesData(fetchedDataByCountries);

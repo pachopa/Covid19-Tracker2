@@ -2,8 +2,13 @@ import React from "react";
 import { NativeSelect, FormControl } from "@material-ui/core";
 
 import { fetchCountries } from "../api/index";
-import styles from "./CountryPicker.module.css";
+import styles from "./countryPicker.module.css";
 
+/**
+ *  What this does: this class component enables a user to pick a specific country to view the country Covid cases
+ *  Feature: 1. Drop down lists have created that displays all countries in the world
+ *           2.
+ */
 class CountryPicker extends React.Component {
   constructor(props) {
     super(props);
@@ -14,6 +19,9 @@ class CountryPicker extends React.Component {
   }
 
   async componentDidMount() {
+    /**
+     *  What this does: Fetch Covid cases data and set the value using setState()
+     */
     const fetchedAllCountries = await fetchCountries();
 
     const fetchedCountries = fetchedAllCountries.map((result) => {
@@ -26,6 +34,9 @@ class CountryPicker extends React.Component {
     const { fetchedCountries } = this.state;
 
     return (
+      /**
+       *  What this does: Dropdown lists are created for the user that can choose one country
+       */
       <FormControl className={styles.formControl}>
         <NativeSelect
           defaultValue=""
