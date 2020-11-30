@@ -105,7 +105,7 @@ class Chart extends React.Component {
      *                 the specific country, the bar chart will be displayed
      *
      */
-    const { country } = this.props;
+    // const { country } = this.props;
     return (
       <div className={styles.container}>
         {/* {country ? this.barChart() : this.lineChart()} */}

@@ -7,7 +7,8 @@ import CountryPicker from "./class-components/countrypicker";
 import Chart from "./class-components/chart";
 
 //import API
-import { fetchDataByCountries, fetchCountries } from "./api";
+import { fetchDataByCountries } from "./api";
+// import { fetchCountries } from "./api";
 
 import styles from "./app.module.css";
 import covidImage from "../src/images/covid.png";
